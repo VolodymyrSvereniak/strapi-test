@@ -3,7 +3,6 @@ export interface CandidatesData {
   name: string;
   email: string;
   resume: string;
-  positionAppliedFor: string;
 }
 
 export interface VacanciesData {

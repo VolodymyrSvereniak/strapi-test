@@ -22,17 +22,16 @@ const VacanciesList = () => {
 
   return (
     <div className="flex items-start flex-col">
-      {" "}
       <div className="flex flex-col text-center gap-5 bg-gray-400">
-        <h1 className="font-bold text-3xl">Vacancies</h1>{" "}
+        <h1 className="font-bold text-3xl">Vacancies</h1>
         {vacancies.map((vacancy) => (
           <div
             className="w-[300px] h-fit bg-gray-600 rounded-lg py-2"
             key={vacancy.documentId}
           >
-            {" "}
-            <h2>{vacancy.title}</h2> <h3>{vacancy.location}</h3>{" "}
-            <h3>{vacancy.salary} USD</h3> <p>{vacancy.description}</p>{" "}
+            <h2>{vacancy.title}</h2> <h3>{vacancy.location}</h3>
+            <h3>{vacancy.salary} USD</h3> <p>{vacancy.description}</p>
+            <h3>{vacancy.requirements}</h3>
             <button
               className="bg-black text-white rounded-lg mt-2 py-1 px-3 hover:bg-black/60"
               onClick={() => handleDeleteVacancy(vacancy.documentId)}
@@ -40,7 +39,7 @@ const VacanciesList = () => {
               Delete
             </button>
           </div>
-        ))}{" "}
+        ))}
       </div>
     </div>
   );

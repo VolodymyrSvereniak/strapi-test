@@ -7,7 +7,7 @@ export default async function getData<T>(
 ) {
   try {
     const response = await axios.get(`http://localhost:1337/api/${dataKey}`);
-    const request: T[] = await response.data.data;
+    const request = await response.data.data;
     return setData(request);
   } catch (error: unknown) {
     if (error instanceof Error) {
