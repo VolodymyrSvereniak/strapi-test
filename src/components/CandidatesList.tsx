@@ -1,5 +1,5 @@
 import getData from "../services/getData";
-import { CandidatesData } from "../interfaces/interfaces";
+import { CandidatesData } from "../types/interfaces";
 import { useEffect, useState } from "react";
 
 const CandidatesList = () => {

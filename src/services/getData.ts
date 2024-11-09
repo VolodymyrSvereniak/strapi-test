@@ -2,11 +2,11 @@ import axios from "axios";
 import { SetStateAction } from "react";
 
 export default async function getData<T>(
-  dataType: string,
+  dataKey: string,
   setData: (data: SetStateAction<T[] | []>) => void
 ) {
   try {
-    const response = await axios.get(`http://localhost:1337/api/${dataType}`);
+    const response = await axios.get(`http://localhost:1337/api/${dataKey}`);
     const request: T[] = await response.data.data;
     return setData(request);
   } catch (error: unknown) {

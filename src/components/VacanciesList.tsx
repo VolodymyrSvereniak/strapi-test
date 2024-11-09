@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import getData from "../services/getData";
-import { VacanciesData } from "../interfaces/interfaces";
+import { VacanciesData } from "../types/interfaces";
 import deleteData from "../services/deleteData";
 
 const VacanciesList = () => {
@@ -21,7 +21,7 @@ const VacanciesList = () => {
   }, []);
 
   return (
-    <div className="flex items-start pl-5 flex-col">
+    <div className="flex items-start flex-col">
       {" "}
       <div className="flex flex-col text-center gap-5 bg-gray-400">
         <h1 className="font-bold text-3xl">Vacancies</h1>{" "}
@@ -34,7 +34,7 @@ const VacanciesList = () => {
             <h2>{vacancy.title}</h2> <h3>{vacancy.location}</h3>{" "}
             <h3>{vacancy.salary} USD</h3> <p>{vacancy.description}</p>{" "}
             <button
-              className="bg-black text-white rounded-lg mt-2 py-1 px-3"
+              className="bg-black text-white rounded-lg mt-2 py-1 px-3 hover:bg-black/60"
               onClick={() => handleDeleteVacancy(vacancy.documentId)}
             >
               Delete
